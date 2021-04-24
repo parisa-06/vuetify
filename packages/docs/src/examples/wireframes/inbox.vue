@@ -1,109 +1,90 @@
 <template>
-  <v-app id="inspire">
-    <v-system-bar app>
-      <v-spacer></v-spacer>
+    <v-app id="inspire">
+        <v-content>
+            <v-container class="fill-height  byd-background-image " fluid>
+                <v-row align="center" justify="center">
+                    <v-col cols="12" sm="8" md="8">
+                        <div class="byd-main">
+                            <v-row>
+                                <v-col cols="12" md="5" >
+                                  <div  align="center" justify="center"  >
+                                      <v-avatar
+                                          class="my-3"
+                                          color="grey darken-1"
+                                          size="74" >
+                                          <v-img
+                                              max-height="200"
+                                              max-width="73"
+                                              src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+                                          ></v-img>
 
-      <v-icon>mdi-square</v-icon>
+                                      </v-avatar>
+                                      <div><h2 class="text-center  teal--text text--accent-3 ">
+                                                نام آموزشگاه
+                                            </h2></div>
+                                      </div>
+                                    <v-card-text >
+                                        <div class="text-center mt-3">
+{{--                                            <v-icon>fa fa-bell-o</v-icon>--}}
+                                            <p class="text-center grey--text darken-1" >اطلاعات وارد شده درست نیست. </p>
+                                        </div>
 
-      <v-icon>mdi-circle</v-icon>
+                                        <div class="byd-form " >
+                                            <v-form>
+                                                <v-text-field
+                                                    id="user"
+                                                    label="نام کاربری"
+                                                    name="User"
+                                                    type="text"
+                                                    color="teal accent-3"
+                                                ></v-text-field>
 
-      <v-icon>mdi-triangle</v-icon>
-    </v-system-bar>
+                                                <v-text-field
+                                                    id="password"
+                                                    label="رمز عبور"
+                                                    name="Password"
+                                                    type="password"
+                                                    color="teal accent-3"
+                                                ></v-text-field>
+                                            </v-form>
+                                        </div>
+                                        <p class="text-center  grey--text lighten-1 display-6 mt-5 " >
+                                            رمز عبورتان را فراموش کرده‌اید؟‌‌‌‌‌‌‌‌‌
+                                            <v-chip
+                                            color="white"
+                                            filter
+                                            link
+                                          class="  teal--text accent-3 byd-forget-password"
+                                        ><b> کلیک کنید. </b></v-chip></p>
+                                    </v-card-text>
+                                    <div class="text-center mt-3 mb-12">
+                                        <v-btn rounded color="teal accent-4"  dark class="ml-4 px-6"> ورود </v-btn>
+                                        <v-btn rounded color="teal accent-3" dark> ثبت نام</v-btn>
+                                    </div>
+                                </v-col>
+                                <v-col cols="12" md="7" class="teal accent-3 byd-advertising">
+                                    <v-card-text class="white--text mt-12">
+                                        <h2 class="text-center "> سلام دوست من </h2>
+                                        <h3
+                                            class="text-center"
+                                        >
+                                            مشخصات شخصی خود را وارد کنید و عضوی از خانواده سهمان شوید.
+                                            <br>
 
-    <v-navigation-drawer
-      v-model="drawer"
-      app
-    >
-      <v-sheet
-        color="grey lighten-4"
-        class="pa-4"
-      >
-        <v-avatar
-          class="mb-4"
-          color="grey darken-1"
-          size="64"
-        ></v-avatar>
+                                        </h3>
+                                        <p  class="text-center">
+                                            در اینجا عکس تبلیغات قرار میگیرد با بک گرند سفید و استفاده از این رنگ :    teal
+                                        </p>
+                                    </v-card-text>
+                                    <div class="text-center">
 
-        <div>john@vuetifyjs.com</div>
-      </v-sheet>
-
-      <v-divider></v-divider>
-
-      <v-list>
-        <v-list-item
-          v-for="[icon, text] in links"
-          :key="icon"
-          link
-        >
-          <v-list-item-icon>
-            <v-icon>{{ icon }}</v-icon>
-          </v-list-item-icon>
-
-          <v-list-item-content>
-            <v-list-item-title>{{ text }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-
-    <v-main>
-      <v-container
-        class="py-8 px-6"
-        fluid
-      >
-        <v-row>
-          <v-col
-            v-for="card in cards"
-            :key="card"
-            cols="12"
-          >
-            <v-card>
-              <v-subheader>{{ card }}</v-subheader>
-
-              <v-list two-line>
-                <template v-for="n in 6">
-                  <v-list-item
-
-                    :key="n"
-                  >
-                    <v-list-item-avatar color="grey darken-1">
-                    </v-list-item-avatar>
-
-                    <v-list-item-content>
-                      <v-list-item-title>Message {{ n }}</v-list-item-title>
-
-                      <v-list-item-subtitle>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil repellendus distinctio similique
-                      </v-list-item-subtitle>
-                    </v-list-item-content>
-                  </v-list-item>
-
-                  <v-divider
-                    v-if="n !== 6"
-                    :key="`divider-${n}`"
-                    inset
-                  ></v-divider>
-                </template>
-              </v-list>
-            </v-card>
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-main>
-  </v-app>
+                                    </div>
+                                </v-col>
+                            </v-row>
+                        </div>
+                    </v-col>
+                </v-row>
+            </v-container>
+        </v-content>
+    </v-app>
 </template>
-
-<script>
-  export default {
-    data: () => ({
-      cards: ['Today', 'Yesterday'],
-      drawer: null,
-      links: [
-        ['mdi-inbox-arrow-down', 'Inbox'],
-        ['mdi-send', 'Send'],
-        ['mdi-delete', 'Trash'],
-        ['mdi-alert-octagon', 'Spam'],
-      ],
-    }),
-  }
-</script>
